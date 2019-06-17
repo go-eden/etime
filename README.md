@@ -7,8 +7,12 @@
 ```bash
 go get github.com/go-eden/etime
 ```
+
+# Usage
  
-# Current Timestamp
+This section shows all features, and their usage.
+ 
+## Current Timestamp
 
 This feature works like Java's `System.currentTimeMillis()`, it will return `int64` value directly:
 
@@ -18,7 +22,7 @@ This feature works like Java's `System.currentTimeMillis()`, it will return `int
 
 For better performance, `Current*` didn't use `time.Now()`, because it's a bit slow. 
 
-## Demo
+### Demo
 
 ```go
 package main
@@ -39,7 +43,7 @@ func main() {
 }
 ```
 
-## Performance
+### Performance
 
 In my benchmark, `etime.Current*` was `40.0 ns/op`, and `time.Now()*` was `67.7 ns/op`, more details:
 

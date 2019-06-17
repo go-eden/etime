@@ -1,4 +1,4 @@
-# etime
+# etime [![Build Status](https://travis-ci.org/go-eden/etime.svg?branch=master)](https://travis-ci.org/go-eden/etime)
 
 `etime` Extend golang's `time` package, to provide more and better features.
 

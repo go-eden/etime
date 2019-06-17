@@ -8,9 +8,13 @@
 go get github.com/go-eden/etime
 ```
  
-# `CurrentSecond`, `CurrentMicrosecond`, `CurrentMillisecond`
+# Current Timestamp
 
-This feature works like Java's `System.currentTimeMillis()`, it will return `int64` value directly.
+This feature works like Java's `System.currentTimeMillis()`, it will return `int64` value directly:
+
++ `CurrentSecond`: obtain current second, use syscall for better performance
++ `CurrentMicrosecond`: obtain current microsecond, use syscall for better performance
++ `CurrentMillisecond`: obtain current millisecond, use syscall for better performance
 
 For better performance, `Current*` didn't use `time.Now()`, because it's a bit slow. 
 

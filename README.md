@@ -63,9 +63,20 @@ Benchmark               Mode  Cnt   Score   Error  Units
 TimestampBenchmark.now  avgt    9  25.697 ± 0.139  ns/op
 ```
 
-So, there should have room for improvement, and i will continue to optimize it.
-
 Some library may be sensitive to this `28ns` optimization, like [slf4go](https://github.com/go-eden/slf4go). 
+
+By the way, `System.currentTimeMillis()`'s implementation was similar with `etime.CurrentSecond`:
+
+```c++
+jlong os::javaTimeMillis() {
+  timeval time;
+  int status = gettimeofday(&time, NULL);
+  assert(status != -1, "bsd error");
+  return jlong(time.tv_sec) * 1000  +  jlong(time.tv_usec / 1000);
+}
+```
+
+So, there should have room for improvement.
 
 # License
 

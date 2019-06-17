@@ -1,3 +1,3 @@
-module github.com/go-eden/time
+module github.com/go-eden/etime
 
 go 1.12

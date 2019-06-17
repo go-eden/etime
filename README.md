@@ -45,7 +45,7 @@ func main() {
 
 ### Performance
 
-In my benchmark, the performance of `etime.CurrentSecond` was about `40 ns/op`, the performance of `time.Now()*` was about `68 ns/op`:
+In my benchmark, the performance of `etime.CurrentSecond` was about `40 ns/op`, the performance of `time.Now()` was about `68 ns/op`:
 
 ```
 BenchmarkCurrentSecond-12         	30000000	        40.8 ns/op	       0 B/op	       0 allocs/op

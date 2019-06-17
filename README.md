@@ -45,7 +45,7 @@ func main() {
 
 ### Performance
 
-In my benchmark, `etime.Current*` was `40.0 ns/op`, and `time.Now()*` was `67.7 ns/op`, more details:
+In my benchmark, `etime.Current*`'s performance was about `40 ns/op`, and `time.Now()*`'s performance was about `68 ns/op`:
 
 ```
 BenchmarkCurrentSecond-12         	30000000	        40.8 ns/op	       0 B/op	       0 allocs/op
@@ -63,9 +63,9 @@ Benchmark               Mode  Cnt   Score   Error  Units
 TimestampBenchmark.now  avgt    9  25.697 ± 0.139  ns/op
 ```
 
-So, there should have room for improvement in the future.
+So, there should have room for improvement, and i will continue to optimize it.
 
-Some library may be sensitive to this `30ns` optimization, like [slf4go](https://github.com/go-eden/slf4go). 
+Some library may be sensitive to this `28ns` optimization, like [slf4go](https://github.com/go-eden/slf4go). 
 
 # License
 

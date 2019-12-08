@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
+	println(etime.NowSecond())
+	println(etime.NowMillisecond())
+	println(etime.NowMicrosecond())
+
 	println(etime.CurrentSecond())
 	println(etime.CurrentMillisecond())
 	println(etime.CurrentMicrosecond())

@@ -2,7 +2,7 @@
 
 `etime` extend golang's `time` package, to provide more and better features.
 
-# ** Moved to https://github.com/go-eden/common **
+**Moved to https://github.com/go-eden/common**
 
 # Install
 
